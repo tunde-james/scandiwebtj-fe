@@ -1,0 +1,101 @@
+@use '../../scss/globals/index';
+@use '../../scss/utils/' as u;
+
+/* Generel Styles */
+.main {
+  background-color: var(--bg-color);
+  font-family: var(--primary-font);
+  min-height: 100vh;
+
+  &__container {
+    width: min(100% - 4rem, 90rem);
+    padding-block: 2rem;
+    margin-inline: auto;
+  }
+
+  hr {
+    height: 3px;
+    border-width: 0;
+    background-color: var(--horizontal-rule);
+  }
+}
+
+/* Nav Styles */
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+
+  &__title {
+    font-weight: var(--headers-weight);
+    font-size: var(--h1-size);
+    margin-bottom: 20px;
+  }
+
+  &__btn_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  @include u.breakpoint(medium) {
+    flex-direction: row;
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Btn Styles */
+.nav__btn {
+  
+  border-radius: 4px;
+  padding-inline: 30px;
+  padding-block: 10px;
+  font-weight: var(--headers-weight);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+
+  &__add {
+    border: 1px solid var(--btn-add);
+    margin-right: 20px;
+    color: var(--btn-add);
+    text-decoration: none;
+  }
+
+  &__add:hover,
+  &__add:focus {
+    background-color: var(--btn-add);
+    color: var(--white-color);
+  }
+
+  &__cancel {
+    border: 1px solid var(--btn-cancel);
+    color: var(--btn-cancel);
+  }
+
+  &__cancel:hover,
+  &__cancel:focus {
+    background-color: var(--btn-cancel);
+    color: var(--white-color);
+  }
+
+  &__delete {
+    border: 1px solid var(--btn-delete);
+    color: var(--btn-delete);
+  }
+
+  &__delete:hover,
+  &__delete:focus {
+    background-color: var(--btn-delete);
+    color: var(--white-color);
+  }
+
+  @include u.breakpoint(medium) {
+    padding-inline: 50px;
+    font-size: var(--text-size);
+  }
+}

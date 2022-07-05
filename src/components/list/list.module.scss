@@ -1,0 +1,23 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  .delete-checkbox {
+    display: block;
+  }
+
+  &__list {
+    border: 1px solid var(--btn-cancel);
+    border-radius: 3px;
+    min-width: 200px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  &__details {
+    text-align: center;
+  }
+}
